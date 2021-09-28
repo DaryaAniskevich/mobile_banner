@@ -29,6 +29,7 @@ body {
 }
 
 .main-bg {
+  width: 100vw;
   background-color: #1b2131;
   background-image: url("./images/4.png");
   background-size: cover;
@@ -72,6 +73,11 @@ body {
   letter-spacing: -0.22px;
 }
 
+.header__link-close {
+  width: 16px;
+  height: 16px;
+}
+
 .article {
   padding: 114px 0 8px;
 }
@@ -105,11 +111,10 @@ body {
   padding-left: 32px;
   background-repeat: no-repeat;
   background-position: left 50%;
-  margin-bottom: 10px;
 }
 
-.article-features__item:last-child {
-  margin-bottom: 0;
+.article-features__item:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .article-features__item_docs {
@@ -157,7 +162,7 @@ body {
   background-image: url("./images/shape-1.svg");
   width: 151px;
   height: 178px;
-  background-size: 144.39px 178px;
+  background-size: 144px 178px;
   color: #ffffff;
 }
 
@@ -170,7 +175,7 @@ body {
   background-image: url("./images/shape-2.svg");
   width: 151px;
   height: 178px;
-  background-size: 144.39px 178px;
+  background-size: 144px 178px;
 }
 
 .article-tariff-item__heading {
@@ -180,9 +185,9 @@ body {
 }
 
 .article-tariff-item__heading_active {
-  font-size: 18.7px;
+  font-size: 19px;
   line-height: 22px;
-  margin-bottom: 11.25px;
+  margin-bottom: 11px;
 }
 
 .article-tariff-item__price {
@@ -193,8 +198,8 @@ body {
 }
 
 .article-tariff-item__price_active {
-  font-size: 15.4px;
-  margin-bottom: 13.37px;
+  font-size: 15px;
+  margin-bottom: 13px;
 }
 
 .article-tariff-item__price-ammount {
@@ -210,7 +215,7 @@ body {
   width: 100%;
   font-size: 14px;
   line-height: 16px;
-  padding: 2px 0;
+  padding: 2px;
   text-transform: uppercase;
   font-weight: 700;
   text-align: center;
@@ -218,10 +223,9 @@ body {
 }
 
 .article-tariff-item__feature_active {
-  font-size: 15.4px;
+  font-size: 15px;
   line-height: 18px;
   margin-bottom: 11px;
-  margin-bottom: 10.98px;
 }
 
 .article-tariff-item__month-price {
@@ -230,7 +234,7 @@ body {
 }
 
 .article-tariff-item__month-price_active {
-  font-size: 13.2px;
+  font-size: 13px;
   line-height: 15px;
 }
 
@@ -239,7 +243,7 @@ body {
   height: 30px;
   border-radius: 15px;
   background-color: #db0000;
-  padding: 9px 0;
+  padding: 9px 1px;
   color: #ffffff;
   font-size: 10px;
   line-height: 12px;
@@ -252,8 +256,8 @@ body {
 .article-tariff__discount_active {
   width: 38px;
   height: 38px;
-  border-radius: 19.2px;
-  padding: 12px 0;
+  border-radius: 19px;
+  padding: 12px 1px;
   right: 1px;
   top: -3px;
 }
@@ -268,7 +272,7 @@ body {
   color: #ffffff;
   background: linear-gradient(270deg, #1987ff 0%, #19ccff 100%);
   border-radius: 30px;
-  padding: 19px 104.5px;
+  padding: 19px 105px;
   border: none;
   margin-bottom: 16px;
 }
@@ -296,4 +300,313 @@ body {
 
 .footer__link {
   display: block;
+}
+
+@media (width: 390px) {
+  .container {
+    padding: 0 22px;
+  }
+  .main-bg {
+    height: 100vh;
+  }
+  .header {
+    padding: 48px 0;
+  }
+  .header__link {
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.23px;
+  }
+  .header__link-close {
+    width: 17px;
+    height: 17px;
+  }
+  .article {
+    padding: 120px 0 9px;
+  }
+  .article__heading {
+    font-size: 38px;
+    line-height: 44px;
+    margin-bottom: 30px;
+  }
+  .article-features {
+    margin-bottom: 45px;
+  }
+
+  .article-features__item {
+    font-size: 18px;
+    line-height: 31px;
+    padding-left: 33px;
+  }
+  .article-features__item:not(:last-child) {
+    margin-bottom: 11px;
+  }
+  .article-features__item_docs {
+    background-size: 27px 16px;
+  }
+  .article-features__item_export {
+    background-size: 22px 24px;
+  }
+  .article-features__item_ocr {
+    background-size: 23px 23px;
+  }
+  .article-tariff {
+    margin-bottom: 16px;
+  }
+  .article-tariff-item {
+    width: 142px;
+    height: 177px;
+    background-size: 136px 177px;
+  }
+  .article-tariff-item_active {
+    width: 157px;
+    height: 193px;
+    background-size: 150px 193px;
+  }
+  .article-tariff-item_annual-active {
+    width: 157px;
+    height: 193px;
+    background-size: 150px 193px;
+  }
+  .article-tariff-item__heading {
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 17px;
+  }
+  .article-tariff-item__heading_active {
+    font-size: 21px;
+    line-height: 24px;
+    margin-bottom: 12px;
+  }
+  .article-tariff-item__price {
+    font-size: 15px;
+    line-height: 16px;
+    margin-bottom: 10px;
+  }
+  .article-tariff-item__price_active {
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+
+  .article-tariff-item__price-ammount {
+    font-size: 24px;
+  }
+
+  .article-tariff-item__price-ammount_active {
+    font-size: 26px;
+  }
+
+  .article-tariff-item__feature {
+    font-size: 15px;
+    line-height: 17px;
+    padding: 3px 1px;
+    margin-bottom: 11px;
+  }
+  .article-tariff-item__feature_active {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 12px;
+  }
+
+  .article-tariff-item__month-price {
+    font-size: 13px;
+    line-height: 15px;
+  }
+
+  .article-tariff-item__month-price_active {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .article-tariff__discount {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    padding: 10px 1px;
+    font-size: 11px;
+    line-height: 13px;
+    right: 2px;
+    top: 4px;
+  }
+
+  .article-tariff__discount_active {
+    width: 41px;
+    height: 41px;
+    border-radius: 21px;
+    padding: 13px 1px;
+    right: 1px;
+    top: 3px;
+  }
+  .article-button {
+    font-size: 18.5px;
+    line-height: 18.5px;
+    border-radius: 32px;
+    padding: 20px 110px;
+    margin-bottom: 16px;
+  }
+  .article__additions {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .footer {
+    padding: 9px 0 41px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+@media (width: 320px) {
+  .container {
+    padding: 0 18px;
+  }
+  .main-bg {
+    height: 100vh;
+    background-position: center -35px;
+  }
+  .header {
+    padding: 30px 0;
+  }
+  .header__link {
+    font-size: 12px;
+    line-height: 13px;
+    letter-spacing: -0.2px;
+  }
+  .header__link-close {
+    width: 11px;
+    height: 11px;
+  }
+  .article {
+    padding: 70px 0 6px;
+  }
+  .article__heading {
+    width: 200px;
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 19px;
+  }
+  .article-features {
+    margin-bottom: 30px;
+  }
+
+  .article-features__item {
+    font-size: 13px;
+    line-height: 20px;
+    padding-left: 28px;
+  }
+  .article-features__item:not(:last-child) {
+    margin-bottom: 7px;
+  }
+  .article-features__item_docs {
+    background-size: 22px 10px;
+  }
+  .article-features__item_export {
+    background-size: 18px 25px;
+  }
+  .article-features__item_ocr {
+    background-size: 19px 14px;
+  }
+  .article-tariff {
+    margin-bottom: 10px;
+  }
+  .article-tariff-item {
+    width: 119px;
+    height: 113px;
+    background-size: 114px 113px;
+  }
+  .article-tariff-item_active,
+  .article-tariff-item_annual-active {
+    width: 131px;
+    height: 124px;
+    background-size: 126px 124px;
+  }
+
+  .article-tariff-item__heading {
+    font-size: 13px;
+    line-height: 15px;
+    margin-bottom: 11px;
+  }
+  .article-tariff-item__heading_active {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 7px;
+  }
+  .article-tariff-item__price {
+    font-size: 10px;
+    line-height: 11px;
+    margin-bottom: 6px;
+  }
+  .article-tariff-item__price_active {
+    font-size: 11px;
+    margin-bottom: 9px;
+  }
+
+  .article-tariff-item__price-ammount {
+    font-size: 16px;
+  }
+
+  .article-tariff-item__price-ammount_active {
+    font-size: 17px;
+  }
+
+  .article-tariff-item__feature {
+    font-size: 10px;
+    line-height: 11px;
+    padding: 2px;
+    margin-bottom: 7px;
+    width: 90%;
+  }
+  .article-tariff-item__feature_active {
+    font-size: 11px;
+    line-height: 13px;
+    margin-bottom: 8px;
+  }
+
+  .article-tariff-item__month-price {
+    font-size: 9px;
+    line-height: 10px;
+  }
+
+  .article-tariff-item__month-price_active {
+    font-size: 9px;
+    line-height: 10px;
+  }
+  .article-tariff__discount {
+    width: 21px;
+    height: 21px;
+    border-radius: 10px;
+    padding: 6px 1px;
+    font-size: 8px;
+    line-height: 8px;
+    right: 13px;
+    top: 0px;
+  }
+
+  .article-tariff__discount_active {
+    width: 27px;
+    height: 27px;
+    border-radius: 13px;
+    padding: 9px 1px;
+    right: 13px;
+    top: -2px;
+  }
+  .article-button {
+    font-size: 12px;
+    line-height: 12px;
+    border-radius: 20px;
+    padding: 13px 90px;
+    margin-bottom: 10px;
+  }
+  .article__additions {
+    font-size: 8px;
+    line-height: 9px;
+  }
+  .footer {
+    padding: 6px 0 26px;
+    font-size: 8px;
+    line-height: 9px;
+  }
+}
+@media only screen (width: 375px) and (height: 667px) {
+  .container {
+    padding: 0 22px;
+  }
 }
