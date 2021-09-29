@@ -59,7 +59,7 @@ body {
 }
 
 .header {
-  padding: 44px 0;
+  padding: 45px 0;
 }
 
 .header-wrapper {
@@ -80,7 +80,7 @@ body {
 }
 
 .article {
-  padding: 114px 0 8px;
+  padding: 115px 0 10px;
 }
 
 .article-wrapper {
@@ -138,7 +138,7 @@ body {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  margin-bottom: 16px;
+  margin-bottom: 17px;
 }
 
 .article-tariff-item {
@@ -287,7 +287,7 @@ body {
 }
 
 .footer {
-  padding: 8px 0 38px;
+  padding: 8px 0 43px;
   font-size: 11px;
   line-height: 13px;
   font-family: "Roboto", "Arial", sans-serif;
@@ -322,7 +322,7 @@ body {
     height: 17px;
   }
   .article {
-    padding: 120px 0 9px;
+    padding: 120px 0 11px;
   }
   .article__heading {
     font-size: 38px;
@@ -351,7 +351,7 @@ body {
     background-size: 23px 23px;
   }
   .article-tariff {
-    margin-bottom: 16px;
+    margin-bottom: 20px;
   }
   .article-tariff-item {
     width: 142px;
@@ -452,7 +452,7 @@ body {
     line-height: 14px;
   }
   .footer {
-    padding: 9px 0 41px;
+    padding: 9px 0 48px;
     font-size: 12px;
     line-height: 14px;
   }
@@ -612,10 +612,10 @@ body {
 }
 @media only screen and (device-width: 375px) and (device-height: 667px) {
   .main-bg {
-    background-position: center -35px;
+    background-position: center -15px;
   }
   .header {
-    padding: 30px 0;
+    padding: 35px 0;
   }
   .header__link {
     font-size: 12px;
@@ -627,7 +627,7 @@ body {
     height: 15px;
   }
   .article {
-    padding: 100px 0 8px;
+    padding: 105px 0 8px;
   }
   .article__heading {
     font-size: 32px;
@@ -778,7 +778,7 @@ body {
   }
 
   .article {
-    padding: 104px 0 8px;
+    padding: 110px 0 8px;
   }
   .article__heading {
     font-size: 34px;
@@ -892,11 +892,11 @@ body {
     line-height: 15px;
     border-radius: 28px;
     padding: 16px 105px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 
   .footer {
-    padding: 6px 0 31px;
+    padding: 8px 0 31px;
     font-size: 10px;
     line-height: 12px;
   }

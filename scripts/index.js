@@ -96,16 +96,8 @@ if (document.documentElement.clientWidth === 320) {
 }
 
 const changeFontSize = () => {
-  if (currentLang === "fr") {
+  if (currentLang === "fr" || currentLang === "ru") {
     tariffFeature.forEach((item) => {
-      item.style = `font-size: ${
-        +window
-          .getComputedStyle(item)
-          .getPropertyValue("font-size")
-          .slice(0, -2) - 2
-      }px; `;
-    });
-    tariffHeading.forEach((item) => {
       item.style = `font-size: ${
         +window
           .getComputedStyle(item)
@@ -114,8 +106,8 @@ const changeFontSize = () => {
       }px; `;
     });
   }
-  if (currentLang === "ru") {
-    tariffFeature.forEach((item) => {
+  if (currentLang === "fr") {
+    tariffHeading.forEach((item) => {
       item.style = `font-size: ${
         +window
           .getComputedStyle(item)
@@ -142,13 +134,15 @@ tariffItems.forEach((tariffItem) => {
       if (item === tariffItem) {
         if (item.id === "month") {
           item.classList.add("article-tariff-item_active");
-        } else if (item.id === "year") {
+        }
+        if (item.id === "year") {
           item.classList.add("article-tariff-item_annual-active");
         }
       } else {
         if (item.id === "month") {
           item.classList.remove("article-tariff-item_active");
-        } else if (item.id === "year") {
+        }
+        if (item.id === "year") {
           item.classList.remove("article-tariff-item_annual-active");
         }
       }
@@ -188,8 +182,7 @@ tariffItems.forEach((tariffItem) => {
   });
 });
 
-continueBtn.addEventListener("click", (event) => {
-  event.preventDefault;
+continueBtn.addEventListener("click", () => {
   document.location.href = choosenTariffHref;
 });
 
