@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./normalize.css" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>Unlimited Access to All Features</title>
   </head>
   <body>
@@ -15,96 +15,150 @@
           <a href="#" class="link header__link"
             ><img src="./images/close.svg" class="header__link-close"
           /></a>
-          <a href="#" class="link header__link">Restore</a>
+          <a href="#" class="link header__link lang" key="Restore">Restore</a>
         </div>
       </header>
       <main>
         <article class="article">
           <div class="container article-wrapper">
-            <h1 class="article__heading">Unlimited Access to All Features</h1>
+            <h1
+              class="article__heading lang"
+              key="Unlimited Access<br>to All Features"
+            >
+              Unlimited Access to All Features
+            </h1>
             <ul class="article-features">
-              <li class="article-features__item article-features__item_docs">
+              <li
+                class="article-features__item article-features__item_docs lang"
+                key="Unlimited documents"
+              >
                 Unlimited documents
               </li>
-              <li class="article-features__item article-features__item_export">
+              <li
+                class="
+                  article-features__item article-features__item_export
+                  lang
+                "
+                key="Count mode"
+              >
                 Export to clouds
               </li>
-              <li class="article-features__item article-features__item_ocr">
+              <li
+                class="article-features__item article-features__item_ocr lang"
+                key="Text recognition (OCR)"
+              >
                 Text recognition (OCR)
               </li>
             </ul>
             <div class="article-tariff">
-              <a class="link article-tariff__link" href="https://apple.com">
-                <div class="article-tariff-item article-tariff-item_active">
-                  <h2
+              <div
+                class="article-tariff-item article-tariff-item_active"
+                data-href="https://apple.com"
+                id="month"
+              >
+                <h2
+                  class="
+                    article-tariff-item__heading
+                    article-tariff-item__heading_active
+                    lang
+                  "
+                  key="Monthly"
+                >
+                  Monthly
+                </h2>
+                <div
+                  class="
+                    article-tariff-item__price article-tariff-item__price_active
+                    lang
+                  "
+                  key="<strong>{{price}}</strong><br>per month"
+                >
+                  <span
                     class="
-                      article-tariff-item__heading
-                      article-tariff-item__heading_active
+                      article-tariff-item__price-ammount
+                      article-tariff-item__price-ammount_active
                     "
-                  >
-                    Monthly
-                  </h2>
-                  <div
-                    class="
-                      article-tariff-item__price
-                      article-tariff-item__price_active
-                    "
-                  >
-                    <span
-                      class="
-                        article-tariff-item__price-ammount
-                        article-tariff-item__price-ammount_active
-                      "
-                      >$9.99</span
-                    ><br />
-                    per month
-                  </div>
-                  <div
-                    class="
-                      article-tariff-item__feature
-                      article-tariff-item__feature_active
-                    "
-                  >
-                    3 DAYS FREE!
-                  </div>
-                  <div
-                    class="
-                      article-tariff-item__month-price
-                      article-tariff-item__month-price_active
-                    "
-                  >
-                    $9.99 month
-                  </div>
+                    >$9.99</span
+                  ><br />
+                  per month
                 </div>
-              </a>
-              <a class="link article-tariff__link" href="https://google.com">
-                <div class="article-tariff-item article-tariff-item_annual">
-                  <div class="article-tariff__discount">-83%</div>
-                  <h2 class="article-tariff-item__heading">Annually</h2>
-                  <div class="article-tariff-item__price">
-                    <span class="article-tariff-item__price_big">$19.99</span
-                    ><br />
-                    per year
-                  </div>
-                  <div class="article-tariff-item__feature">most popular</div>
-                  <div class="article-tariff-item__month-price">
-                    $1.66 month
-                  </div>
+                <div
+                  class="
+                    article-tariff-item__feature
+                    article-tariff-item__feature_active
+                    lang
+                  "
+                  key="3 DAYS FREE"
+                >
+                  3 DAYS FREE!
                 </div>
-              </a>
+                <div
+                  class="
+                    article-tariff-item__month-price
+                    article-tariff-item__month-price_active
+                    lang
+                  "
+                  key="{{price}}/month"
+                >
+                  $9.99 month
+                </div>
+              </div>
+
+              <div
+                class="article-tariff-item article-tariff-item_annual"
+                data-href="https://google.com"
+                id="year"
+              >
+                <div class="article-tariff__discount lang" key="-83%">-83%</div>
+                <h2 class="article-tariff-item__heading lang" key="Annually">
+                  Annually
+                </h2>
+                <div
+                  class="article-tariff-item__price lang"
+                  key="<strong>{{price}}</strong><br>per year"
+                >
+                  <span class="article-tariff-item__price_big">$19.99</span
+                  ><br />
+                  per year
+                </div>
+                <div
+                  class="article-tariff-item__feature lang"
+                  key="MOST POPULAR"
+                >
+                  most popular
+                </div>
+                <div
+                  class="article-tariff-item__month-price lang"
+                  key="{{price}}/month"
+                >
+                  $1.66 month
+                </div>
+              </div>
             </div>
-            <button class="button article-button">Continue</button>
-            <div class="article__additions">Auto-rewable. Cancel anytime</div>
+            <button class="button article-button lang" key="Continue">
+              Continue
+            </button>
+            <div
+              class="article__additions lang"
+              key="Auto-renewable. Cancel anytime."
+            >
+              Auto-rewable. Cancel anytime
+            </div>
           </div>
         </article>
       </main>
       <footer class="footer">
         <div class="container footer-wrapper">
-          <a href="#" class="link footer__link">Terms of Use</a>
-          <a href="#" class="link footer__link">Privacy Policy</a>
+          <a href="#" class="link footer__link lang" key="Terms of Use"
+            >Terms of Use</a
+          >
+          <a href="#" class="link footer__link lang" key="Privacy Policy"
+            >Privacy Policy</a
+          >
         </div>
       </footer>
     </div>
-    <script src="./index.js"></script>
+    <script src="./scripts/lang.js"></script>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>

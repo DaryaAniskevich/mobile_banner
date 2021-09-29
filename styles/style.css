@@ -5,7 +5,7 @@
   font-style: normal;
   font-weight: normal;
   src: local("SF Pro Display Regular"),
-    url("./fonts/SFPRODISPLAYREGULAR.woff") format("woff");
+    url("../fonts/SFPRODISPLAYREGULAR.woff") format("woff");
 }
 
 * {
@@ -30,8 +30,9 @@ body {
 
 .main-bg {
   width: 100vw;
+  height: 100vh;
   background-color: #1b2131;
-  background-image: url("./images/4.png");
+  background-image: url("../images/4.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -40,7 +41,7 @@ body {
   only screen and (min--moz-device-pixel-ratio: 1.5),
   only screen and (min-resolution: 192dpi) {
   .main-bg {
-    background-image: url("./images/4@2x.png");
+    background-image: url("../images/4@2x.png");
   }
 }
 
@@ -48,7 +49,7 @@ body {
   only screen and (min--moz-device-pixel-ratio: 2.5),
   only screen and (min-resolution: 326dpi) {
   .main-bg {
-    background-image: url("./images/4@3x.png");
+    background-image: url("../images/4@3x.png");
   }
 }
 
@@ -105,7 +106,7 @@ body {
 
 .article-features__item {
   font-size: 17px;
-  line-height: 30px;
+  line-height: 25px;
   letter-spacing: -0.32px;
   text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.68);
   padding-left: 32px;
@@ -114,21 +115,21 @@ body {
 }
 
 .article-features__item:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 }
 
 .article-features__item_docs {
-  background-image: url("./images/unlimitedDocs.svg");
+  background-image: url("../images/unlimitedDocs.svg");
   background-size: 26px 15px;
 }
 
 .article-features__item_export {
-  background-image: url("./images/export.svg");
+  background-image: url("../images/export.svg");
   background-size: 20px 22px;
 }
 
 .article-features__item_ocr {
-  background-image: url("./images/noAds.svg");
+  background-image: url("../images/noAds.svg");
   background-size: 21px 21px;
 }
 
@@ -140,14 +141,10 @@ body {
   margin-bottom: 16px;
 }
 
-.article-tariff__link {
-  display: block;
-}
-
 .article-tariff-item {
   width: 137px;
   height: 162px;
-  background-image: url("./images/shape-transparency.svg");
+  background-image: url("../images/shape-transparency.svg");
   background-repeat: no-repeat;
   background-size: 131px 162px;
   background-position: center center;
@@ -156,10 +153,11 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .article-tariff-item_active {
-  background-image: url("./images/shape-1.svg");
+  background-image: url("../images/shape-1.svg");
   width: 151px;
   height: 178px;
   background-size: 144px 178px;
@@ -167,12 +165,12 @@ body {
 }
 
 .article-tariff-item_annual {
-  background-image: url("./images/shape-2-transparent.svg");
+  background-image: url("../images/shape-2-transparent.svg");
 }
 
 .article-tariff-item_annual-active {
   color: #ffffff;
-  background-image: url("./images/shape-2.svg");
+  background-image: url("../images/shape-2.svg");
   width: 151px;
   height: 178px;
   background-size: 144px 178px;
@@ -200,6 +198,10 @@ body {
 .article-tariff-item__price_active {
   font-size: 15px;
   margin-bottom: 13px;
+}
+
+.article-tariff-item__price_big {
+  font-size: 24px;
 }
 
 .article-tariff-item__price-ammount {
@@ -250,7 +252,7 @@ body {
   text-align: center;
   position: absolute;
   right: 2px;
-  top: 0.5px;
+  top: 1px;
 }
 
 .article-tariff__discount_active {
@@ -259,7 +261,7 @@ body {
   border-radius: 19px;
   padding: 12px 1px;
   right: 1px;
-  top: -3px;
+  top: -1px;
 }
 
 .button {
@@ -302,13 +304,11 @@ body {
   display: block;
 }
 
-@media (width: 390px) {
+@media only screen and (device-width: 390px) and (device-height: 884px) {
   .container {
     padding: 0 22px;
   }
-  .main-bg {
-    height: 100vh;
-  }
+
   .header {
     padding: 48px 0;
   }
@@ -383,6 +383,9 @@ body {
     line-height: 16px;
     margin-bottom: 10px;
   }
+  .article-tariff-item__price_big {
+    font-size: 20px;
+  }
   .article-tariff-item__price_active {
     font-size: 16px;
     margin-bottom: 14px;
@@ -429,10 +432,11 @@ body {
   }
 
   .article-tariff__discount_active {
-    width: 41px;
-    height: 41px;
+    width: 40px;
+    height: 40px;
     border-radius: 21px;
     padding: 13px 1px;
+    font-size: 12px;
     right: 1px;
     top: 3px;
   }
@@ -454,12 +458,11 @@ body {
   }
 }
 
-@media (width: 320px) {
+@media only screen and (device-width: 320px) and (device-height: 568px) {
   .container {
     padding: 0 18px;
   }
   .main-bg {
-    height: 100vh;
     background-position: center -35px;
   }
   .header {
@@ -478,7 +481,6 @@ body {
     padding: 70px 0 6px;
   }
   .article__heading {
-    width: 200px;
     font-size: 26px;
     line-height: 30px;
     margin-bottom: 19px;
@@ -533,6 +535,9 @@ body {
     font-size: 10px;
     line-height: 11px;
     margin-bottom: 6px;
+  }
+  .article-tariff-item__price_big {
+    font-size: 16px;
   }
   .article-tariff-item__price_active {
     font-size: 11px;
@@ -605,8 +610,294 @@ body {
     line-height: 9px;
   }
 }
-@media only screen (width: 375px) and (height: 667px) {
+@media only screen and (device-width: 375px) and (device-height: 667px) {
+  .main-bg {
+    background-position: center -35px;
+  }
+  .header {
+    padding: 30px 0;
+  }
+  .header__link {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.22px;
+  }
+  .header__link-close {
+    width: 15px;
+    height: 15px;
+  }
+  .article {
+    padding: 100px 0 8px;
+  }
+  .article__heading {
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: 26px;
+  }
+  .article-features {
+    margin-bottom: 25px;
+  }
+
+  .article-features__item {
+    font-size: 15px;
+    line-height: 23px;
+    padding-left: 30px;
+  }
+  .article-features__item:not(:last-child) {
+    margin-bottom: 3px;
+  }
+
+  .article-features__item_docs {
+    background-size: 24px 13px;
+  }
+
+  .article-features__item_export {
+    background-size: 18px 20px;
+  }
+
+  .article-features__item_ocr {
+    background-size: 19px 19px;
+  }
+
+  .article-tariff {
+    margin-bottom: 12px;
+  }
+  .article-tariff-item {
+    width: 115px;
+    height: 140px;
+    background-size: 109px 140px;
+  }
+  .article-tariff-item_active,
+  .article-tariff-item_annual-active {
+    width: 129px;
+    height: 159px;
+    background-size: 122px 159px;
+  }
+
+  .article-tariff-item__heading {
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 13px;
+  }
+  .article-tariff-item__heading_active {
+    font-size: 17px;
+    line-height: 20px;
+    margin-bottom: 11px;
+  }
+  .article-tariff-item__price {
+    font-size: 12px;
+    line-height: 13px;
+    margin-bottom: 7px;
+  }
+  .article-tariff-item__price_big {
+    font-size: 20px;
+  }
+  .article-tariff-item__price_active {
+    font-size: 13px;
+    margin-bottom: 11px;
+  }
+
+  .article-tariff-item__price-ammount {
+    font-size: 20px;
+  }
+
+  .article-tariff-item__price-ammount_active {
+    font-size: 22px;
+  }
+
+  .article-tariff-item__feature {
+    font-size: 11px;
+    line-height: 13px;
+    padding: 2px 1px;
+    margin-bottom: 9px;
+  }
+  .article-tariff-item__feature_active {
+    font-size: 13px;
+    line-height: 15px;
+    margin-bottom: 10px;
+  }
+
+  .article-tariff-item__month-price {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .article-tariff-item__month-price_active {
+    font-size: 11px;
+    line-height: 13px;
+  }
+  .article-tariff__discount {
+    width: 26px;
+    height: 26px;
+    border-radius: 13px;
+    padding: 7px 2px;
+    font-size: 9px;
+    line-height: 10px;
+    right: 2px;
+    top: 3px;
+  }
+
+  .article-tariff__discount_active {
+    width: 33px;
+    height: 33px;
+    border-radius: 17px;
+    padding: 11px 1px;
+    right: 0px;
+    top: 2px;
+    font-size: 11px;
+    line-height: 12px;
+  }
+  .article-button {
+    font-size: 14px;
+    line-height: 14px;
+    border-radius: 28px;
+    padding: 15px 90px;
+    margin-bottom: 10px;
+  }
+  .article__additions {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .footer {
+    padding: 5px 0 31px;
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
+
+@media only screen and (device-width: 414px) and (device-height: 736px) {
+  .main-bg {
+    background-position: center -30px;
+  }
   .container {
-    padding: 0 22px;
+    padding: 0 25px;
+  }
+
+  .header {
+    padding: 40px 0;
+  }
+
+  .article {
+    padding: 104px 0 8px;
+  }
+  .article__heading {
+    font-size: 34px;
+    line-height: 40px;
+    margin-bottom: 30px;
+  }
+  .article-features {
+    margin-bottom: 28px;
+  }
+
+  .article-features__item {
+    font-size: 17px;
+    line-height: 25px;
+    padding-left: 30px;
+  }
+  .article-features__item:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  .article-tariff {
+    margin-bottom: 14px;
+  }
+  .article-tariff-item {
+    width: 125px;
+    height: 151px;
+    background-size: 129px 149px;
+  }
+  .article-tariff-item_active,
+  .article-tariff-item_annual-active {
+    width: 139px;
+    height: 169px;
+    background-size: 132px 169px;
+  }
+
+  .article-tariff-item__heading {
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 14px;
+  }
+  .article-tariff-item__heading_active {
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 12px;
+  }
+  .article-tariff-item__price {
+    font-size: 13px;
+    line-height: 14px;
+    margin-bottom: 8px;
+  }
+
+  .article-tariff-item__price_big {
+    font-size: 20px;
+  }
+  .article-tariff-item__price_active {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .article-tariff-item__price-ammount {
+    font-size: 21px;
+  }
+
+  .article-tariff-item__price-ammount_active {
+    font-size: 23px;
+  }
+
+  .article-tariff-item__feature {
+    font-size: 12px;
+    line-height: 14px;
+    padding: 2px 1px;
+    margin-bottom: 10px;
+  }
+  .article-tariff-item__feature_active {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 11px;
+  }
+
+  .article-tariff-item__month-price {
+    font-size: 11px;
+    line-height: 13px;
+  }
+
+  .article-tariff-item__month-price_active {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .article-tariff__discount {
+    width: 27px;
+    height: 27px;
+    border-radius: 13px;
+    padding: 8px 2px;
+    font-size: 10px;
+    line-height: 11px;
+    right: 2px;
+    top: 1px;
+  }
+
+  .article-tariff__discount_active {
+    width: 34px;
+    height: 34px;
+    border-radius: 17px;
+    padding: 11px 1px;
+    font-size: 12px;
+    line-height: 13px;
+    right: 1px;
+    top: 2px;
+  }
+  .article-button {
+    font-size: 15px;
+    line-height: 15px;
+    border-radius: 28px;
+    padding: 16px 105px;
+    margin-bottom: 10px;
+  }
+
+  .footer {
+    padding: 6px 0 31px;
+    font-size: 10px;
+    line-height: 12px;
   }
 }
