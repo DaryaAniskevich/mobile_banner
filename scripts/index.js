@@ -72,9 +72,9 @@ setURL();
 
 html.setAttribute("lang", currentLang);
 
-const changeFontSize = (element, difFont, difLine) => {
-  if (heading.offsetHeight > 85 && currentLang !== "en") {
-    heading.style = `font-size: ${
+const changeHeaderFontSize = (element, difFont, difLine) => {
+  if (element.offsetHeight > 85 && currentLang !== "en") {
+    element.style = `font-size: ${
       +window
         .getComputedStyle(element)
         .getPropertyValue("font-size")
@@ -90,10 +90,43 @@ const changeFontSize = (element, difFont, difLine) => {
 };
 
 if (document.documentElement.clientWidth === 320) {
-  changeFontSize(heading, 2, 2);
+  changeHeaderFontSize(heading, 2, 2);
 } else {
-  changeFontSize(heading, 7, 4);
+  changeHeaderFontSize(heading, 7, 4);
 }
+
+const changeFontSize = () => {
+  if (currentLang === "fr") {
+    tariffFeature.forEach((item) => {
+      item.style = `font-size: ${
+        +window
+          .getComputedStyle(item)
+          .getPropertyValue("font-size")
+          .slice(0, -2) - 2
+      }px; `;
+    });
+    tariffHeading.forEach((item) => {
+      item.style = `font-size: ${
+        +window
+          .getComputedStyle(item)
+          .getPropertyValue("font-size")
+          .slice(0, -2) - 2
+      }px; `;
+    });
+  }
+  if (currentLang === "ru") {
+    tariffFeature.forEach((item) => {
+      item.style = `font-size: ${
+        +window
+          .getComputedStyle(item)
+          .getPropertyValue("font-size")
+          .slice(0, -2) - 2
+      }px; `;
+    });
+  }
+};
+
+changeFontSize();
 
 tariffItems.forEach((tariffItem) => {
   tariffItem.addEventListener("touchstart", () => {
