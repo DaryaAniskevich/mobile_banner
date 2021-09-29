@@ -28,7 +28,7 @@ for (let lang in languages) {
   availableLangs.push(lang);
 }
 
-let updateURL = (lang) => {
+const updateURL = (lang) => {
   const baseUrl = `
     ${window.location.protocol}//${window.location.host}${window.location.pathname}`;
   const newUrl = `${baseUrl}?lang=${
@@ -52,15 +52,15 @@ const changeLanguage = (lang) => {
 changeLanguage(userLang);
 
 const handUrlChange = () => {
-  let url = new URL(document.location);
-  let urlSearch = url.search;
-  let pageLanguage = urlSearch.split("=")[1];
+  const url = new URL(document.location);
+  const urlSearch = url.search;
+  const pageLanguage = urlSearch.split("=")[1];
   changeLanguage(pageLanguage);
 };
 
 const setURL = () => {
-  let url = new URL(document.location);
-  let urlSearch = url.search;
+  const url = new URL(document.location);
+  const urlSearch = url.search;
   if (urlSearch.includes("lang=")) {
     handUrlChange();
   } else {
@@ -92,7 +92,7 @@ const changeHeaderFontSize = (element, difFont, difLine) => {
 if (document.documentElement.clientWidth === 320) {
   changeHeaderFontSize(heading, 2, 2);
 } else {
-  changeHeaderFontSize(heading, 7, 4);
+  changeHeaderFontSize(heading, 9, 6);
 }
 
 const changeFontSize = () => {
@@ -199,14 +199,12 @@ tariffPrice.forEach((item) => {
 
 const setPrice = () => {
   tariffItems.forEach((item) => {
+    const monthPrice = item.querySelector(".article-tariff-item__month-price");
+    const payment = item.querySelector(".article-tariff-item__price_big");
     if (item.id === "month") {
-      let monthPrice = item.querySelector(".article-tariff-item__month-price");
-      let payment = item.querySelector(".article-tariff-item__price_big");
       monthPrice.innerHTML = monthPrice.innerText.replace("{{price}}", "$9.99");
       payment.innerHTML = payment.innerText.replace("{{price}}", "$9.99");
     } else if (item.id === "year") {
-      let monthPrice = item.querySelector(".article-tariff-item__month-price");
-      let payment = item.querySelector(".article-tariff-item__price_big");
       monthPrice.innerHTML = monthPrice.innerText.replace("{{price}}", "$1.66");
       payment.innerHTML = payment.innerText.replace("{{price}}", "$19.99");
     }
