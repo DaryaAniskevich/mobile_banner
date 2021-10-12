@@ -54,6 +54,12 @@ const handUrlChange = () => {
   const urlSearch = url.search;
   const pageLanguage = urlSearch.split("=")[1];
   changeLanguage(pageLanguage);
+  if (!availableLangs.includes(pageLanguage)) {
+    const baseUrl = `
+    ${window.location.protocol}//${window.location.host}${window.location.pathname}`;
+    const newUrl = `${baseUrl}?lang=en`;
+    history.pushState(null, null, newUrl);
+  }
 };
 
 const setURL = () => {
